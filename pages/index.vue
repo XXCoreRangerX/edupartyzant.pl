@@ -12,6 +12,7 @@ useSeoMeta({
     twitterDescription: Defaults.bio,
     twitterImage: "/hero.jpeg",
     twitterCard: "summary",
+    themeColor: "#0ea5e9",
 });
 
 useHead({
