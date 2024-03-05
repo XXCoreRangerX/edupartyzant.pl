@@ -1,0 +1,1 @@
+# edupartyzant.pl
