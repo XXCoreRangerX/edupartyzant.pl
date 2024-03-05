@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <Navbar />
-        <main class="h-full min-h-screen px-6 sm:px-8">
+    <div class="min-h-screen">
+        <main class="p-6">
             <slot />
         </main>
         <Footer />
