@@ -1,5 +1,4 @@
 <script lang="ts">
-import defaults from "../defaults/defaults";
 import { cn } from "@/lib/utils";
 
 export default {
@@ -9,9 +8,6 @@ export default {
         };
     },
     computed: {
-        defaults() {
-            return defaults;
-        },
         sortedRoutes() {
             return this.$router.options.routes;
         },
@@ -37,7 +33,7 @@ export default {
             )
         "
     >
-        <NuxtLink to="/" class="text-xl font-bold text-accent-foreground">{{ defaults.title }}</NuxtLink>
+        <NuxtLink to="/" class="text-xl font-bold text-accent-foreground">{{ useAppConfig().title }}</NuxtLink>
         <div class="flex flex-wrap items-center gap-x-5">
             <ul class="hidden flex-wrap gap-4 text-sm capitalize min-[400px]:flex">
                 <li v-for="route in sortedRoutes" :key="route.path">

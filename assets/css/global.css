@@ -1,17 +1,14 @@
-@font-face {
-    font-family: "Inter";
+body {
+    @apply relative antialiased;
 }
 
-html {
-    @apply min-h-screen antialiased;
-    font-family: "Inter", sans-serif;
+pre::-webkit-scrollbar {
+    display: none;
 }
 
-.router-link-active,
-.router-link-exact-active {
-    @apply font-bold;
-}
-
-img {
-    @apply rounded-md;
+input[type="text"],
+input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }

@@ -1,19 +1,14 @@
-/*
- * This file contains the default values for the website's metadata, such as title, description, and socials.
- * Feel free to modify these values to your liking.
- */
+export default defineAppConfig({
+    title: "Artur Tutka",
+    description: "Nauczyciel z pasją do druku 3D, pomagania i edukacji",
+    url: "https://edupartyzant.pl",
+    image: "/images/edupartyzant.png",
+    bio: "Nauczyciel z pasją do druku 3D, pomagania i edukacji. Edupartyzant.",
+    fullName: "Artur Tutka",
+    username: "Edupartyzant",
+    email: "mail@edupartyzant.pl",
 
-class Defaults {
-    static title = "Artur Tutka";
-    static description = "Nauczyciel z pasją do druku 3D, pomagania i edukacji";
-    static url = "https://edupartyzant.pl";
-    static bio = "Nauczyciel z pasją do druku 3D, pomagania i edukacji. Edupartyzant.";
-
-    static fullName = "Artur Tutka";
-    static username = "Edupartyzant";
-    static email = "mail@edupartyzant.pl";
-
-    static socials = [
+    socials: [
         {
             name: "Facebook",
             icon: "fa6-brands:facebook",
@@ -39,7 +34,5 @@ class Defaults {
             icon: "Patronite",
             url: "https://patronite.pl/edu-partyzant",
         },
-    ];
-}
-
-export default Defaults;
+    ],
+});

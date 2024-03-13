@@ -17,7 +17,6 @@
         "@nuxtjs/robots": "^3.0.0",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.1.0",
-        "lucide-vue-next": "^0.344.0",
         "nuxt": "^3.10.3",
         "radix-vue": "^1.4.9",
         "tailwind-merge": "^2.2.1",
@@ -26,14 +25,12 @@
         "vue-router": "^4.3.0"
     },
     "devDependencies": {
-        "@nuxt/eslint-config": "^0.2.0",
+        "@antfu/eslint-config": "^2.8.1",
         "@nuxtjs/color-mode": "^3.3.2",
         "@nuxtjs/eslint-module": "^4.1.0",
         "@nuxtjs/google-fonts": "^3.1.3",
         "@nuxtjs/tailwindcss": "^6.11.4",
-        "ajv": "latest",
         "eslint": "^8.57.0",
-        "eslint-config-prettier": "^9.1.0",
         "nuxt-icon": "^0.6.8",
         "prettier": "^3.2.5",
         "prettier-plugin-organize-imports": "^3.2.4",

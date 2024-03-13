@@ -1,10 +1,6 @@
-<script setup lang="ts">
-import defaults from "@/defaults/defaults";
-</script>
-
 <template>
-    <div class="flex min-h-screen items-center justify-center">
-        <div class="grid items-center justify-center gap-6 text-center sm:flex sm:gap-10">
+    <div class="flex min-h-screen items-center justify-center py-6">
+        <div class="grid h-full items-center justify-center gap-6 text-center">
             <NuxtImg
                 src="/hero.jpeg"
                 alt="Artur Tutka"
@@ -13,35 +9,48 @@ import defaults from "@/defaults/defaults";
                 format="webp"
                 width="640"
                 height="640"
-                class="mx-auto max-w-sm rounded-full outline outline-4 outline-offset-4 outline-accent-foreground"
+                class="mx-auto w-full max-w-sm rounded-full outline outline-4 outline-offset-4 outline-accent-foreground"
             />
-            <div>
+            <div class="space-y-2">
                 <h1 class="text-5xl font-semibold text-accent-foreground sm:text-6xl">
-                    {{ defaults.fullName }}
+                    {{ useAppConfig().fullName }}
                 </h1>
-                <p class="mt-2 text-lg">{{ defaults.bio }}</p>
-                <div class="flex items-center justify-center gap-3 py-5">
-                    <NuxtLink
-                        v-for="social in defaults.socials"
+                <p class="text-lg">{{ useAppConfig().bio }}</p>
+                <div class="flex items-center justify-center gap-2">
+                    <Button
+                        v-for="social in useAppConfig().socials"
                         :key="social.url"
                         :to="social.url"
                         :aria-label="social.name"
+                        variant="ghost"
+                        size="icon"
+                        as-child
                     >
-                        <Icon
-                            :name="social.icon"
-                            exact
-                            class="h-8 w-8 text-accent-foreground transition-colors hover:text-accent-foreground/90"
-                        />
-                    </NuxtLink>
+                        <NuxtLink :to="social.url">
+                            <Icon
+                                :name="social.icon"
+                                exact
+                                class="h-10 w-10 text-accent-foreground transition-colors hover:text-accent-foreground/90"
+                            />
+                        </NuxtLink>
+                    </Button>
                 </div>
-                <Button variant="accent" class="group font-bold" as-child
-                    ><NuxtLink to="https://patronite.pl/edu-partyzant"
-                        >Zobacz więcej<Icon
-                            name="lucide:arrow-up-right"
-                            class="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></NuxtLink
-                ></Button>
-                <Button variant="link" class="ml-2" as-child><NuxtLink to="#kontakt">Kontakt</NuxtLink></Button>
+                <div class="space-x-2 space-y-2">
+                    <Button variant="accent" class="group font-bold" as-child>
+                        <NuxtLink to="https://patronite.pl/edu-partyzant">
+                            Zobacz więcej na Patronite
+                            <Icon
+                                name="lucide:arrow-up-right"
+                                class="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                            />
+                        </NuxtLink>
+                    </Button>
+                    <Button variant="outline" as-child>
+                        <NuxtLink to="mailto:mail@edupartyzant.pl">Kontakt</NuxtLink>
+                    </Button>
+                </div>
             </div>
         </div>
     </div>
 </template>
+<script setup lang="ts"></script>

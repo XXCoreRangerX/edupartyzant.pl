@@ -1,8 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: "en",
+            },
+            link: [
+                {
+                    rel: "icon",
+                    type: "image/png",
+                    href: "/favicon.png",
+                },
+            ],
+        },
+    },
     devtools: { enabled: true },
     modules: [
-        "@nuxtjs/eslint-module",
         "@nuxtjs/robots",
         "@nuxtjs/tailwindcss",
         "shadcn-nuxt",
@@ -11,15 +24,14 @@ export default defineNuxtConfig({
         "@nuxt/image",
         "nuxt-icon",
     ],
-    typescript: {
-        strict: true,
-    },
+    css: ["~/assets/css/global.css"],
     googleFonts: {
         families: {
-            Inter: true,
+            Inter: [400, 500, 700],
         },
     },
     colorMode: {
+        preference: "light",
         classSuffix: "",
     },
 });
