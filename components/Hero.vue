@@ -1,22 +1,24 @@
 <template>
-    <div class="flex min-h-screen items-center justify-center py-6">
-        <div class="grid h-full items-center justify-center gap-6 text-center">
-            <NuxtImg
-                src="/hero.jpeg"
-                alt="Artur Tutka"
-                sizes="80vw sm:50vw"
-                quality="80"
-                format="webp"
-                width="640"
-                height="640"
-                class="mx-auto w-full max-w-sm rounded-full outline outline-4 outline-offset-4 outline-accent-foreground"
-            />
+    <div class="flex min-h-screen items-center justify-center">
+        <div class="grid h-full gap-6 text-center">
+            <div class="mx-auto w-full max-w-xs px-3">
+                <NuxtImg
+                    src="/hero.jpeg"
+                    alt="Artur Tutka"
+                    sizes="80vw sm:50vw"
+                    quality="80"
+                    format="webp"
+                    width="640"
+                    height="640"
+                    class="rounded-full outline outline-4 outline-offset-4 outline-accent-foreground"
+                />
+            </div>
             <div class="space-y-2">
                 <h1 class="text-5xl font-semibold text-accent-foreground sm:text-6xl">
                     {{ useAppConfig().fullName }}
                 </h1>
                 <p class="text-lg">{{ useAppConfig().bio }}</p>
-                <div class="flex items-center justify-center gap-2">
+                <div class="flex flex-wrap items-center justify-center gap-2 py-2">
                     <Button
                         v-for="social in useAppConfig().socials"
                         :key="social.url"

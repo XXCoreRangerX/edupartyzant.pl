@@ -2,7 +2,7 @@ export default defineAppConfig({
     title: "Artur Tutka",
     description: "Nauczyciel z pasją do druku 3D, pomagania i edukacji",
     url: "https://edupartyzant.pl",
-    image: "/images/edupartyzant.png",
+    image: "/hero.jpeg",
     bio: "Nauczyciel z pasją do druku 3D, pomagania i edukacji. Edupartyzant.",
     fullName: "Artur Tutka",
     username: "Edupartyzant",
